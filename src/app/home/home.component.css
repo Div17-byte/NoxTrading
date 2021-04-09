@@ -1,0 +1,98 @@
+
+
+.fullv{
+    width: 100vw;
+    height:calc(100vh - 73px);
+    max-height: fit-content;
+    position: relative;
+    background-color: #050626;
+}
+.head{
+    position:absolute;
+    top:40%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+
+}
+
+.head h1{
+    color: white;
+    margin-bottom: 20px;
+    text-align: center;
+}
+.abt-title{
+  all: initial;
+  font-family: Roboto, "Helvetica Neue", sans-serif;
+  font-size:9em;
+  background-image: url('../../assets/img/tryBg.jpg');
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  flex-basis: 100%;
+  text-align: center;
+  text-shadow: 20px 0px #F68404;
+}
+.abt{
+  flex-wrap: wrap;
+  justify-content: center;
+  flex-direction: row;
+}
+.content-text{
+color: #F68404;
+font-size: 1.3rem;
+flex-basis: 100%;
+max-width: 64.44%;
+line-height: 40px;
+padding: 25px;
+font-style: italic;
+
+}
+.content{
+  justify-content: center;
+  flex-wrap: wrap;
+  text-align: center;
+}
+.container-fluid{
+  height: calc(100vh - 72.5px);
+}
+
+.bgg-dark{
+  background-color: #0A0B0F;
+}
+
+.imgcon{
+border-radius: 9999px !important;
+background-color:#000000 ;
+padding: 10px;
+
+}
+
+.imgcon img{
+  width: 100px;
+}
+
+video{
+    height: 100vh;
+    object-fit: cover;
+    width: 100vw;
+}
+@media (max-width:768px){
+    video{
+        object-fit: cover;
+        height: 100vh;
+        width: 100vw;
+    }
+}
+@media (max-width:1024px){
+    video{
+        object-fit: cover;
+        height: 100vh;
+        width: 100vw;
+    }
+}
+
+
+

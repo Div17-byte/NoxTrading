@@ -1,0 +1,28 @@
+
+<div class="container">
+  <div class="title m-4">
+    <h1 class="d-1">Top Trending Tech</h1>
+  </div>
+  <div class="spin_ce mb-5">
+    <mat-spinner *ngIf="isLoading" color='warn'></mat-spinner>
+  </div>
+  <mat-card *ngFor="let n of news" class="example-card mb-5">
+    <mat-card-header class="mat-con">
+      <div mat-card-avatar class="example-header-image"></div>
+      <mat-card-title>{{n?.title}}</mat-card-title>
+      <mat-card-subtitle>{{n.source.name}}</mat-card-subtitle>
+      <div class="fill"></div>
+      <p class="text-right">{{n?.publishedAt |date}}</p>
+      </mat-card-header>
+
+    <mat-card-content>
+      <img mat-card-image [src]="n?.urlToImage" alt="Photo of news">
+      <h1 class='theme-color'>Description</h1>
+      <p class="desc">
+        {{n?.description}}
+      </p>
+      <a [href]='n?.url' target="new" mat-raised-button>Read More..</a>
+    </mat-card-content>
+  </mat-card>
+</div>
+

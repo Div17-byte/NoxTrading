@@ -1,0 +1,64 @@
+<div class="container mt-2 pr-5 pl-5 w3-animate-right">
+    <div class="row">
+        <div class="col-12">
+            <h1 class='text-center mb-3 mt-4 white-cl'><small>Edit Your Profile</small></h1>
+            <div class="profile-container ">
+
+
+                <!-- profile pic -->
+               <div class="profile-pic">
+                   <img [src]="proPic_src" alt="">
+
+
+                   <input
+                      type="file"
+                      name="propic"
+                      id="propic"
+                      accept="image/*"
+                      #imageFile
+                      (change)="fileSelectAndUpload($event)"
+                    >
+                    
+
+                   <div class='blur-bg'>
+                    <div class="btn" id='profilepicuploader' (click)="imageFile.click()">+</div>
+                   </div>
+               </div>
+               <!-- end profile pic -->
+
+               <!--details-->
+               <div class="details w3-animate-right">
+                   <form action="">
+                    <div class="form-group">
+                        <label for="email" class='form-label text-center white-cl'> {{ email }}</label>
+                       </div>
+
+                       <div class="form-group">
+                           <label  for="fullname" class='form-label white-cl'>Full Name: <input type="text" class='form-control' name='fullName' placeholder="change name" [(ngModel)]="FullName"></label>
+                       </div>
+
+
+
+                       <div class="form-group">
+                        <label for="pasword" class='form-label white-cl'>Password: <input type="password" placeholder="new password" class='form-control' name='password' [(ngModel)]="password"> </label>
+                       </div>
+
+
+                       <div class="form-group">
+                        <label for="steamLink" class='form-label white-cl'>Steam Profile Link: <input type="text" placeholder="Link" class='form-control' name='steamLink' [(ngModel)]="steamlink" > </label>
+                       </div>
+
+
+                   </form>
+                   <div class="buttons text-center mb-5">
+                    <div class="btn btn-cancel btn-dark py-2 px-4 ml-2 my-3" (click)="cancelChanges()">Cancel</div>
+                    <div class="btn btn-save btn-dark py-2 px-4 ml-2 my-3" (click)="savedetails()"><span>Save</span></div>
+                   </div>
+
+               </div>
+               <!--end details -->
+            </div>
+
+        </div>
+    </div>
+</div>

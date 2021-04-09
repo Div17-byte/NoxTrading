@@ -1,0 +1,51 @@
+<div class="container-fluid" >
+    <div class="page-wrapper bg-gra-01 font-poppins">
+        <div  class="wrapper wrapper--w960 w3-animate-right"  >
+            <div class="card card-3">
+                <div class="card-heading"></div>
+                <div class="card-body ">
+                    <h2 style="margin-bottom: 90px;" class="title ">Sign up</h2>
+                    <form #signupform="ngForm" (ngSubmit)='onSignup()'>
+
+
+                        <div class="input-group position-relative">
+                            <span *ngIf='firstName.invalid && firstName.touched' class=" has-error alert-danger">Invalid Name</span>
+                            <input class="form-control input--style-3" required pattern="[a-zA-Z\s]+" type="text" #firstName="ngModel" placeholder="Name" name="firstName" [(ngModel)]="valuefirstName">
+
+                        </div>
+
+
+                        <div class="input-group">
+                            <span *ngIf='email.invalid && email.touched' class="has-error alert-danger">Invalid Email</span>
+                            <input class="form-control input--style-3" required pattern ="[a-zA-Z0-9.]+@[a-zA-Z]+\.[a-zA-Z]+" #email="ngModel" [(ngModel)]="valueemail"  type="email" placeholder="Email" name="email">
+                        </div>
+
+                        <div class="input-group">
+                            <span *ngIf='steamLink.invalid && steamLink.touched' class="has-error alert-danger">Invalid Steam Profile Link</span>
+                            <input class="form-control input--style-3" required pattern ="^https?://(www\.)?steamcommunity\.com/id/[a-zA-Z0-9/]*$" #steamLink="ngModel" [(ngModel)]="valuesteamLink"  type="text" placeholder="Steam Profile Link" name="steamLink">
+                        </div>
+
+                        <div class="input-group">
+                            <span *ngIf='password.invalid && password.touched' class="has-error alert-danger">Password Too Short</span>
+                            <input class="form-control input--style-3" required type="password" placeholder="Password" name="password" #password="ngModel" minlength="8" [(ngModel)]='valuepassword' >
+                        </div>
+
+
+                        <div class="input-group">
+                            <span *ngIf='confirmPassword.touched && password.value != confirmPassword.value' class="has-error alert-danger">Password did not match</span>
+                            <input class="form-control input--style-3" required type="password" placeholder="Confirm Password" name="confirmPassword" #confirmPassword="ngModel" minlength="8" [(ngModel)]='valueconfirmPassword' >
+                        </div>
+
+
+                        <div class="p-t-10">
+                            <button [disabled] ='signupform.invalid || password.value != confirmPassword.value' class="btn btn--pill btn--green" type="submit">Submit</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+</div>

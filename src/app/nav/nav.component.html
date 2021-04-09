@@ -1,0 +1,29 @@
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark nav-dark w3-animate-top">
+    <a class="navbar-brand" >
+        <img style="width: 50px;" routerLink="/" src="../../assets/icons/logoMain.png" alt="Logo">
+    </a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav mr-auto">
+        <li class="nav-item active">
+          <a routerLink="/" class="nav-link" >Home <span class="sr-only">(current)</span></a>
+        </li>
+        <li class="nav-item">
+          <a routerLink='/market/trading' class="nav-link" >Trading Market</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" style="cursor: pointer;" (click)="gotoAbt()" >About</a>
+          </li>
+
+
+      </ul>
+
+        <button *ngIf="isLogged" routerLink="/market/trading" style="border-color: #F68404;color: #F68404;" class="btn  my-2 my-sm-0 mr-2 round-btn" type="submit"> My Dashboard</button>
+        <button *ngIf="!isLogged" routerLink="/sign-up" style="border-color: #F68404;color: #F68404;" class="btn  my-2 my-sm-0 mr-2 round-btn" type="submit">Register</button>
+        <button *ngIf="!isLogged" routerLink="/login" style="border-color: #F68404;color: #F68404;" class="btn  my-2 my-sm-0 round-btn" type="submit">Log In</button>
+
+    </div>
+  </nav>

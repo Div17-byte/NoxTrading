@@ -1,0 +1,59 @@
+.example-card {
+  max-height: 700px;
+}
+.example-header-image {
+  background-image: url('../../favicon.ico');
+  background-size: cover;
+}
+.mat-con{
+  display: flex;
+  padding: 25px 3em 25px 0px;
+}
+.fill{
+  flex: 1;
+}
+.container{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: left;
+}
+img{
+  width: 400px;
+}
+.desc{
+  font-size: 16px;
+  padding: 15px 0px;
+}
+.d-1{
+  font-size: 3rem;
+  text-align: center;
+  color: #F68404;
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  font-style: italic;
+}
+.title{
+  display: flex;
+  justify-content: center;
+  width: 100%;
+}
+.theme-color{
+  color: #F68404;
+}
+mat-card-subtitle{
+  color: #F68404;
+  font-size: 15px;
+}
+.mat-button, .mat-raised-button{
+  background-color:#633B0D;
+  color: #f2f2f2;
+}
+mat-card{
+background-color:#181A1B ;
+color: #f2f2f2;
+}
+.spin_ce{
+  display: flex;
+  justify-content: center;
+  width: 100%;
+}
+

@@ -1,0 +1,40 @@
+
+    <div class="page-wrapper bg-gra-01 p-t-180 p-b-100 font-poppins">
+        <div class="wrapper wrapper--w960 w3-animate-right">
+            <div class="card card-3">
+
+                <div class="card-heading"></div>
+
+                <div class="card-body position-relative ">
+                    <div  class="row" style="position: absolute;top: 0;">
+                        <div [ngClass]='{"show":isError}' id="alert-suc" class="alert alert-success alert-dismissible fade ">
+                          <button type="button" class="close" data-dismiss="alert">&times;</button>
+                          <strong>Success!</strong> Your Traded has been Posted
+                        </div>
+                      </div>
+                    <h1 style="margin-bottom: 60px;" class="title">Log In</h1>
+
+                    <form #loginform="ngForm" (ngSubmit)='onLogin()'>
+
+                        <div class="input-group">
+                            <span *ngIf='email.invalid && email.touched' class="has-error alert-danger">Invalid Email</span>
+                            <input class="form-control input--style-3" required pattern ="[a-zA-Z0-9.]+@[a-zA-Z]+\.[a-zA-Z]+" #email="ngModel" [(ngModel)]="valueemail"  type="email" placeholder="Email" name="email">
+                        </div>
+
+                        <div class="input-group">
+                            <span *ngIf='password.invalid && password.touched' class="has-error alert-danger">Password Too Short</span>
+                            <input class="form-control input--style-3" required type="password" placeholder="Password" name="password" #password="ngModel" minlength="8" [(ngModel)]='valuepassword' >
+                        </div>
+
+                        <div class="p-t-10">
+                            <button [disabled] ='loginform.invalid' class="btn btn--pill btn--green" type="submit">Login</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+
