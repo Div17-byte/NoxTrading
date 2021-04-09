@@ -1,6 +1,10 @@
 # TdApp
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 9.1.7.
+## How to Use
+- Run npm install in root folder
+- Run npm install in server folder
+- Run node server.js in server folder
+- Run ng serve -o or npm start in root folder
 
 ## Development server
 
