@@ -1,4 +1,4 @@
-# TdApp
+# NoxTrading
 
 ## How to Use
 - Run npm install in root folder
